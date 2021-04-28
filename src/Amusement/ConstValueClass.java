@@ -11,6 +11,7 @@ public class ConstValueClass {
 	final static int AM_OLD_NIGHT_PRICE = 37000; // 노인 야간 이용권 가격
 	final static int AM_BABY_PRICE = 0; // 유아 이용권 가격
 
+	final static double AM_NORMAL_DISCOUNT_RATE = 1.0;
 	final static double AM_DISABLED_DISCOUNT_RATE = 0.6; // 장애인 할인 후 비율 (40% 할인)
 	final static double AM_MERIT_DISCOUNT_RATE = 0.5; // 국가유공자 할인 후 비율 (50% 할인)
 	final static double AM_MULTICHILD_DISCOUNT_RATE = 0.8; // 다자녀 할인 후 비율 (20% 할인)

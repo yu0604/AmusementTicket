@@ -36,7 +36,7 @@ public class InputFromConsole {
 	public String regist_number_input() {
 		// 주민등록번호를 선택해 입력받는 메소드
 		System.out.println("주민번호를 입력하세요.");
-		String regist_number = scanner.nextLine();
+		String regist_number = scanner.next();
 
 		while (true) {
 			if (regist_number.length() != 13) {
@@ -68,6 +68,11 @@ public class InputFromConsole {
 	public int priority_selection_input() {
 		// 우대사항 선택해 입력받는 메소드
 		System.out.println("우대사항을 선택하세요.");
+		System.out.println("1. 없음 (나이 우대는 자동처리)");
+		System.out.println("2. 장애인");
+		System.out.println("3. 국가유공자");
+		System.out.println("4. 다자녀");
+		System.out.println("5. 임산부");
 		int priority_selection = scanner.nextInt();
 		
 		while (true) {

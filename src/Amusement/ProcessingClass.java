@@ -5,8 +5,8 @@ import java.util.Calendar;
 
 public class ProcessingClass {
 	Calendar c = Calendar.getInstance();
-	SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMDD");
-	
+	SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
+	AmusementType at;
 
 	public String getDate() {
 		return sdf.format(c.getTime());
@@ -67,14 +67,75 @@ public class ProcessingClass {
 
 		return age_checker;
 	}
-	
+
 	public int ticket_amount(int ticket_amount) {
 		return ticket_amount;
 	}
-	
+
+	public int ticket_price_cal(String ticket_type, String age_checker, int ticket_amount, String priority) {
+		int ticket_price = 0;
+		if (ticket_type.equals("주간권")) {
+			ticket_price = ticket_price_day(age_checker);
+		} else {
+			ticket_price = ticket_price_night(age_checker);
+		}
+
+		ticket_price = (int) (ticket_price * ticket_amount * ticket_sale_for_priority(priority));
+		return ticket_price;
+	}
+
+	public int ticket_price_day(String age_checker) {
+		int ticket_price_day = 0;
+		if (age_checker.equals("유아")) {
+			ticket_price_day = ConstValueClass.AM_BABY_PRICE;
+		} else if (age_checker.equals("소인")) {
+			ticket_price_day = ConstValueClass.AM_KID_DAY_PRICE;
+		} else if (age_checker.equals("청소년")) {
+			ticket_price_day = ConstValueClass.AM_TEEN_DAY_PRICE;
+		} else if (age_checker.equals("노인")) {
+			ticket_price_day = ConstValueClass.AM_OLD_DAY_PRICE;
+		} else {
+			ticket_price_day = ConstValueClass.AM_ADULT_DAY_PRICE;
+		}
+		return ticket_price_day;
+	}
+
+	public int ticket_price_night(String age_checker) {
+		int ticket_price_night = 0;
+		if (age_checker.equals("유아")) {
+			ticket_price_night = ConstValueClass.AM_BABY_PRICE;
+		} else if (age_checker.equals("소인")) {
+			ticket_price_night = ConstValueClass.AM_KID_NIGHT_PRICE;
+		} else if (age_checker.equals("청소년")) {
+			ticket_price_night = ConstValueClass.AM_TEEN_NIGHT_PRICE;
+		} else if (age_checker.equals("노인")) {
+			ticket_price_night = ConstValueClass.AM_OLD_NIGHT_PRICE;
+		} else {
+			ticket_price_night = ConstValueClass.AM_ADULT_NIGHT_PRICE;
+		}
+		return ticket_price_night;
+	}
+
+	public double ticket_sale_for_priority(String priority) {
+		double sale_rate = ConstValueClass.AM_NORMAL_DISCOUNT_RATE;
+		if (priority.equals("없음")) {
+			sale_rate = ConstValueClass.AM_NORMAL_DISCOUNT_RATE;
+		} else if (priority.equals("장애인")) {
+			sale_rate = ConstValueClass.AM_DISABLED_DISCOUNT_RATE;
+		} else if (priority.equals("국가유공자")) {
+			sale_rate = ConstValueClass.AM_MERIT_DISCOUNT_RATE;
+		} else if (priority.equals("다자녀")) {
+			sale_rate = ConstValueClass.AM_MULTICHILD_DISCOUNT_RATE;
+		} else if (priority.equals("임산부")) {
+			sale_rate = ConstValueClass.AM_PREGNANT_DISCOUNT_RATE;
+		}
+
+		return sale_rate;
+	}
+
 	public String priority_string(int priority_selection) {
 		String priority = "";
-		
+
 		if (priority_selection == ConstValueClass.AM_NORMAL_DISCOUNT_TYPE) {
 			priority = "없음";
 		} else if (priority_selection == ConstValueClass.AM_DISABLE_DISCOUNT_TYPE) {
@@ -86,7 +147,7 @@ public class ProcessingClass {
 		} else if (priority_selection == ConstValueClass.AM_PREGNANT_DISCOUNT_TYPE) {
 			priority = "임산부";
 		}
-		
+
 		return priority;
 	}
 
