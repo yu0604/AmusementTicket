@@ -94,10 +94,10 @@ public class InputFromConsole {
 		
 		while (true) {
 			if (exit == 1 || exit == 2) {
+				break;
+			} else {
 				System.out.println("다시 입력해주세요.");
 				exit = scanner.nextInt();
-			} else {
-				break;
 			}
 		}
 		return exit;
@@ -109,10 +109,10 @@ public class InputFromConsole {
 		
 		while (true) {
 			if (exit == 1 || exit == 2) {
+				break;
+			} else {
 				System.out.println("다시 입력해주세요.");
 				exit = scanner.nextInt();
-			} else {
-				break;
 			}
 		}
 		return exit;

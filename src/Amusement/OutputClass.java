@@ -8,11 +8,11 @@ public class OutputClass {
 		System.out.println("================에버랜드================");
 		int total_price = 0;
 		for (int i = 0; i < at_arrlist.size(); i++) {
-			System.out.printf("%s %s x %4d%8d원", at_arrlist.get(i).ticket_type, at_arrlist.get(i).age_checker, at_arrlist.get(i).ticket_amount, at_arrlist.get(i).ticket_price);
+			System.out.printf("%5s %5s x %4d%10d원", at_arrlist.get(i).ticket_type, at_arrlist.get(i).age_checker, at_arrlist.get(i).ticket_amount, at_arrlist.get(i).ticket_price);
 			System.out.println();
 			total_price += at_arrlist.get(i).ticket_price;
 		}
 		
-		System.out.printf("입장료 총액은 %d원 입니다.", total_price);
+		System.out.printf("\n입장료 총액은 %d원 입니다.\n", total_price);
 	}
 }
