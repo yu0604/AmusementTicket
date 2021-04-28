@@ -43,8 +43,8 @@ public class InputFromConsole {
 				System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
 				regist_number = scanner.nextLine();
 			} else {
-				if (regist_number.charAt(6) != 1 || regist_number.charAt(6) != 2 || regist_number.charAt(6) != 3
-						|| regist_number.charAt(6) != 4) {
+				if (regist_number.charAt(6) != '1' && regist_number.charAt(6) != '2' && regist_number.charAt(6) != '3'
+						&& regist_number.charAt(6) != '4') {
 					System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
 					regist_number = scanner.nextLine();
 				}
