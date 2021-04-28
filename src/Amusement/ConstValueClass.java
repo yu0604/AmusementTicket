@@ -26,15 +26,15 @@ public class ConstValueClass {
 	final static int AM_MULTICHILD_DISCOUNT_TYPE = 4; // 옵션 번호 4 - 다자녀 할인
 	final static int AM_PREGNANT_DISCOUNT_TYPE = 5; // 옵션 번호 5 - 임산부 할인
 	
-	final static int AM_BABY_AGE = 2; // 
-	final static int AM_KID_AGE_MIN = 3;
-	final static int AM_KID_AGE_MAX = 12;
-	final static int AM_TEEN_AGE_MIN = 13;
-	final static int AM_TEEN_AGE_MAX = 18;
-	final static int AM_OLD_AGE = 65;
+	final static int AM_BABY_AGE = 2; // 유아 나이 최댓값
+	final static int AM_KID_AGE_MIN = 3; // 소인 나이 최솟값
+	final static int AM_KID_AGE_MAX = 12; // 소인 나이 최댓값
+	final static int AM_TEEN_AGE_MIN = 13; // 청소년 나이 최솟값
+	final static int AM_TEEN_AGE_MAX = 18; // 청소년 나이 최댓값
+	final static int AM_OLD_AGE = 65; // 노인 나이 최솟값
 	
-	final static int AM_AGE_CHECKER_BEFORE_MAN = 1;
-	final static int AM_AGE_CHECKER_BEFORE_WOMAN = 2;
-	final static int AM_AGE_CHECKER_AFTER_MAN = 3;
-	final static int AM_AGE_CHECKER_AFTER_WOMAN = 4;
+	final static int AM_AGE_CHECKER_BEFORE_MAN = 1; // 1900년대생 남자 (주민등록번호)
+	final static int AM_AGE_CHECKER_BEFORE_WOMAN = 2; // 1900년대생 여자 (주민등록번호)
+	final static int AM_AGE_CHECKER_AFTER_MAN = 3; // 2000년대생 남자 (주민등록번호)
+	final static int AM_AGE_CHECKER_AFTER_WOMAN = 4; // 2000년대생 여자 (주민등록번호)
 }
