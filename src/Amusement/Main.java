@@ -8,10 +8,11 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		InputFromConsole ifc = new InputFromConsole();
 		ProcessingClass pc = new ProcessingClass();
-		ArrayList<AmusementType> at_arrlist;
-		AmusementType at;
 		OutputClass opc = new OutputClass();
 		FileWriteClass fwc = new FileWriteClass();
+		ArrayList<AmusementType> at_arrlist;
+		AmusementType at;
+		
 		int exit = 0;
 		int exit2 = 0;
 		
