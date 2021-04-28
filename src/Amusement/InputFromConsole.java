@@ -37,16 +37,26 @@ public class InputFromConsole {
 		// 주민등록번호를 선택해 입력받는 메소드
 		System.out.println("주민번호를 입력하세요.");
 		String regist_number = scanner.next();
+		int month = Integer.parseInt(regist_number.substring(2, 4));
+		int[] endday = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 		while (true) {
 			if (regist_number.length() != 13) {
 				System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
-				regist_number = scanner.nextLine();
+				regist_number = scanner.next();
 			} else {
 				if (regist_number.charAt(6) != '1' && regist_number.charAt(6) != '2' && regist_number.charAt(6) != '3'
 						&& regist_number.charAt(6) != '4') {
 					System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
-					regist_number = scanner.nextLine();
+					regist_number = scanner.next();
+				}
+				if (month > 12 || month < 1) {
+					System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
+					regist_number = scanner.next();
+				} else if (Integer.parseInt(regist_number.substring(4, 6)) < 1
+						|| Integer.parseInt(regist_number.substring(4, 6)) > endday[month - 1]) {
+					System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
+					regist_number = scanner.next();
 				}
 				break;
 			}
