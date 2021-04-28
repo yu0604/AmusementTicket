@@ -43,6 +43,11 @@ public class InputFromConsole {
 				System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
 				regist_number = scanner.nextLine();
 			} else {
+				if (regist_number.charAt(6) != 1 || regist_number.charAt(6) != 2 || regist_number.charAt(6) != 3
+						|| regist_number.charAt(6) != 4) {
+					System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
+					regist_number = scanner.nextLine();
+				}
 				break;
 			}
 		}
@@ -74,7 +79,7 @@ public class InputFromConsole {
 		System.out.println("4. 다자녀");
 		System.out.println("5. 임산부");
 		int priority_selection = scanner.nextInt();
-		
+
 		while (true) {
 			if (priority_selection < 1 || priority_selection > 5) {
 				System.out.println("우대사항 선택이 올바르지 않습니다. 다시 입력해주세요.");
@@ -85,13 +90,13 @@ public class InputFromConsole {
 		}
 		return priority_selection;
 	}
-	
+
 	public int loop_exit() {
 		System.out.println("계속 발권 하시겠습니까?");
 		System.out.println("1. 티켓 발권");
 		System.out.println("2. 종료");
 		int exit = scanner.nextInt();
-		
+
 		while (true) {
 			if (exit == 1 || exit == 2) {
 				break;
@@ -102,11 +107,11 @@ public class InputFromConsole {
 		}
 		return exit;
 	}
-	
+
 	public int loop_exit2() {
 		System.out.println("계속 진행(1: 새로운 주문, 2: 프로그램 종료) : ");
 		int exit = scanner.nextInt();
-		
+
 		while (true) {
 			if (exit == 1 || exit == 2) {
 				break;
@@ -117,5 +122,5 @@ public class InputFromConsole {
 		}
 		return exit;
 	}
-	
+
 }

@@ -41,12 +41,15 @@ public class ProcessingClass {
 			year = 1900 + Integer.parseInt(regist_number.substring(0, 2));
 			// ex) 1900 + 91
 		}
+		
+		month = Integer.parseInt(regist_number.substring(2, 4));
+		day = Integer.parseInt(regist_number.substring(4, 6));
 
-		if (day_today - Integer.parseInt(regist_number.substring(4, 6)) < 0) {
+		if (day_today - day < 0) {
 			month++;
 		}
 
-		if (month_today - Integer.parseInt(regist_number.substring(2, 4)) < 0) {
+		if (month_today - month < 0) {
 			year++;
 		}
 
