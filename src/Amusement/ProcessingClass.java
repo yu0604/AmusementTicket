@@ -6,7 +6,6 @@ import java.util.Calendar;
 public class ProcessingClass {
 	Calendar c = Calendar.getInstance();
 	SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
-	AmusementType at;
 
 	public String getDate() {
 		return sdf.format(c.getTime());

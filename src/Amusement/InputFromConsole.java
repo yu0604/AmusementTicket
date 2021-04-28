@@ -83,7 +83,39 @@ public class InputFromConsole {
 				break;
 			}
 		}
-		
 		return priority_selection;
 	}
+	
+	public int loop_exit() {
+		System.out.println("계속 발권 하시겠습니까?");
+		System.out.println("1. 티켓 발권");
+		System.out.println("2. 종료");
+		int exit = scanner.nextInt();
+		
+		while (true) {
+			if (exit == 1 || exit == 2) {
+				System.out.println("다시 입력해주세요.");
+				exit = scanner.nextInt();
+			} else {
+				break;
+			}
+		}
+		return exit;
+	}
+	
+	public int loop_exit2() {
+		System.out.println("계속 진행(1: 새로운 주문, 2: 프로그램 종료) : ");
+		int exit = scanner.nextInt();
+		
+		while (true) {
+			if (exit == 1 || exit == 2) {
+				System.out.println("다시 입력해주세요.");
+				exit = scanner.nextInt();
+			} else {
+				break;
+			}
+		}
+		return exit;
+	}
+	
 }

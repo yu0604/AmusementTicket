@@ -9,6 +9,7 @@ public class Main {
 		ProcessingClass pc = new ProcessingClass();
 		ArrayList<AmusementType> at_arrlist = new ArrayList<AmusementType>();
 		AmusementType at;
+		OutputClass opc = new OutputClass();
 
 		while (true) {
 			int i = 0;
@@ -23,8 +24,10 @@ public class Main {
 				// AmusementType의 생성자
 				at_arrlist.add(at);
 				System.out.println(at_arrlist.get(i).ticket_price);
+				
 				i++;
 				if (i == 2) {
+					opc.print_total_ticket(at_arrlist);
 					break;
 				}
 			}
