@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class FileReaderAnalysis {
 
 	public ArrayList<String[]> FileReadForAnalysis() throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("ticket_data.csv"));
+		BufferedReader br = new BufferedReader(new FileReader("test_file.csv"));
 
 		String line;
 		

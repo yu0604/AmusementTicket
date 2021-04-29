@@ -87,11 +87,11 @@ public class ProcessingClass {
 			if (arr_str.get(i)[1].equals("주간권")) {
 				if (arr_str.get(i)[2].equals("유아")) {
 					ticketTypeArr[ConstValueClass.AM_BABY - 1][0] += Integer.parseInt(arr_str.get(i)[3]);
-				} else if (arr_str.get(i)[2].equals("소인")) {
+				} else if (arr_str.get(i)[2].equals("어린이")) {
 					ticketTypeArr[ConstValueClass.AM_CHILD - 1][0] += Integer.parseInt(arr_str.get(i)[3]);
 				} else if (arr_str.get(i)[2].equals("청소년")) {
 					ticketTypeArr[ConstValueClass.AM_TEEN - 1][0] += Integer.parseInt(arr_str.get(i)[3]);
-				} else if (arr_str.get(i)[2].equals("대인")) {
+				} else if (arr_str.get(i)[2].equals("어른")) {
 					ticketTypeArr[ConstValueClass.AM_ADULT - 1][0] += Integer.parseInt(arr_str.get(i)[3]);
 				} else if (arr_str.get(i)[2].equals("노인")) {
 					ticketTypeArr[ConstValueClass.AM_OLD - 1][0] += Integer.parseInt(arr_str.get(i)[3]);
@@ -101,11 +101,11 @@ public class ProcessingClass {
 			} else {
 				if (arr_str.get(i)[2].equals("유아")) {
 					ticketTypeArr[ConstValueClass.AM_BABY - 1][1] += Integer.parseInt(arr_str.get(i)[3]);
-				} else if (arr_str.get(i)[2].equals("소인")) {
+				} else if (arr_str.get(i)[2].equals("어린이")) {
 					ticketTypeArr[ConstValueClass.AM_CHILD - 1][1] += Integer.parseInt(arr_str.get(i)[3]);
 				} else if (arr_str.get(i)[2].equals("청소년")) {
 					ticketTypeArr[ConstValueClass.AM_TEEN - 1][1] += Integer.parseInt(arr_str.get(i)[3]);
-				} else if (arr_str.get(i)[2].equals("대인")) {
+				} else if (arr_str.get(i)[2].equals("어른")) {
 					ticketTypeArr[ConstValueClass.AM_ADULT - 1][1] += Integer.parseInt(arr_str.get(i)[3]);
 				} else if (arr_str.get(i)[2].equals("노인")) {
 					ticketTypeArr[ConstValueClass.AM_OLD - 1][1] += Integer.parseInt(arr_str.get(i)[3]);
