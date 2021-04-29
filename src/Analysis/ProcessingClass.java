@@ -120,15 +120,15 @@ public class ProcessingClass {
 	public int[] priorityMakeArr(ArrayList<String[]> arr_str) {
 		int[] priorityArr = new int[6];
 		for (int i = 1; i < arr_str.size(); i++) {
-			if (arr_str.get(i)[5].equals("없음")) {
+			if (arr_str.get(i)[5].contains("없음")) {
 				priorityArr[ConstValueClass.AM_NONE] += Integer.parseInt(arr_str.get(i)[3]);
-			} else if (arr_str.get(i)[5].equals("장애인")) {
+			} else if (arr_str.get(i)[5].contains("장애인")) {
 				priorityArr[ConstValueClass.AM_DISABLE] += Integer.parseInt(arr_str.get(i)[3]);
-			} else if (arr_str.get(i)[5].equals("국가유공자")) {
+			} else if (arr_str.get(i)[5].contains("국가유공자")) {
 				priorityArr[ConstValueClass.AM_MERIT] += Integer.parseInt(arr_str.get(i)[3]);
-			} else if (arr_str.get(i)[5].equals("다자녀")) {
+			} else if (arr_str.get(i)[5].contains("다자녀")) {
 				priorityArr[ConstValueClass.AM_MULTICHILD] += Integer.parseInt(arr_str.get(i)[3]);
-			} else if (arr_str.get(i)[5].equals("임산부")) {
+			} else if (arr_str.get(i)[5].contains("임산부")) {
 				priorityArr[ConstValueClass.AM_PREGNANT] += Integer.parseInt(arr_str.get(i)[3]);
 			}
 			priorityArr[0] += Integer.parseInt(arr_str.get(i)[3]);
