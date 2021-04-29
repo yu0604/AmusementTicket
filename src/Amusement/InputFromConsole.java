@@ -38,7 +38,6 @@ public class InputFromConsole {
 		// 주민등록번호를 입력받는 메소드
 		System.out.println("주민번호를 입력하세요.");
 		String regist_number = scanner.next();
-		int month = Integer.parseInt(regist_number.substring(2, 4));
 		int[] endday = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 		// 각 월의 마지막일을 넣은 배열 -> 이후 950332와 같은 오류를 잡기 위함
 
@@ -48,6 +47,7 @@ public class InputFromConsole {
 				System.out.println("주민번호가 올바르지 않습니다. 다시 입력해주세요.");
 				regist_number = scanner.next();
 			} else {
+				int month = Integer.parseInt(regist_number.substring(2, 4));
 				if (regist_number.charAt(6) != '1' && regist_number.charAt(6) != '2' && regist_number.charAt(6) != '3'
 						&& regist_number.charAt(6) != '4') {
 					// 주민등록번호 뒷자리 첫번째 자리가 1,2,3,4가 아닌 경우 예외처리

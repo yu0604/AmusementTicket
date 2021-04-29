@@ -46,13 +46,13 @@ public class ProcessingClass {
 			if (arr_str.get(i)[2].equals("유아")) {
 				temparr[2] = Integer.toString(ConstValueClass.AM_BABY);
 				arr_str.set(i, temparr);
-			} else if (arr_str.get(i)[2].equals("소인")) {
+			} else if (arr_str.get(i)[2].equals("어린이")) {
 				temparr[2] = Integer.toString(ConstValueClass.AM_CHILD);
 				arr_str.set(i, temparr);
 			} else if (arr_str.get(i)[2].equals("청소년")) {
 				temparr[2] = Integer.toString(ConstValueClass.AM_TEEN);
 				arr_str.set(i, temparr);
-			} else if (arr_str.get(i)[2].equals("대인")) {
+			} else if (arr_str.get(i)[2].equals("어른")) {
 				temparr[2] = Integer.toString(ConstValueClass.AM_ADULT);
 				arr_str.set(i, temparr);
 			} else if (arr_str.get(i)[2].equals("노인")) {
